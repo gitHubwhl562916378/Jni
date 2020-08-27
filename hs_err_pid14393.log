@@ -1,0 +1,735 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f2502b27767, pid=14393, tid=0x00007f250404a700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_231-b11) (build 1.8.0_231-b11)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.231-b11 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x6c7767]  get_method_id(JNIEnv_*, _jclass*, char const*, char const*, bool, Thread*) [clone .constprop.107]+0x77
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f24fc010800):  JavaThread "main" [_thread_in_vm, id=14401, stack(0x00007f2503f4a000,0x00007f250404b000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f24e99cc800, RCX=0x00007f24b358cbfb, RDX=0x0000000000000028
+RSP=0x00007f2504049810, RBP=0x00007f2504049870, RSI=0x00007f24b358cbf8, RDI=0x00007f24e99ce3c0
+R8 =0x0000000000000003, R9 =0x00000000000000e5, R10=0x00007f24fc446110, R11=0xfffffffffffffffe
+R12=0x00007f2504049830, R13=0x00007f24b358cbfc, R14=0x00007f24e99ce3c0, R15=0x00007f24fc010800
+RIP=0x00007f2502b27767, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f2504049810)
+0x00007f2504049810:   0000000000000000 0000000000000000
+0x00007f2504049820:   00007f24fc010800 00007f2504049880
+0x00007f2504049830:   0000000000009b75 00007f24b358cbfc
+0x00007f2504049840:   00007f2504049870 00007f24fc010800
+0x00007f2504049850:   0000000000000000 00007f24b358cbfc
+0x00007f2504049860:   00007f24b358cbf8 00007f24fc010800
+0x00007f2504049870:   00007f25040498c0 00007f2502b27ae4
+0x00007f2504049880:   00007f24fc010800 00007f24fc00e050
+0x00007f2504049890:   00007f25000000c7 00007f2502fd11a8
+0x00007f25040498a0:   00007f24e9e33a40 0000000000000000
+0x00007f25040498b0:   00007f24e9e33a40 00007f25040499e0
+0x00007f25040498c0:   00007f25040498f0 00007f24b358c566
+0x00007f25040498d0:   00007f24b358cbf8 00007f24b358cbfc
+0x00007f25040498e0:   0000000000000000 00007f24fc0109f8
+0x00007f25040498f0:   00007f2504049960 00007f24b358c20b
+0x00007f2504049900:   00007f25040499e0 00007f24fc0109f8
+0x00007f2504049910:   00007f24e9e33a40 00007f24fc010800
+0x00007f2504049920:   0000000000000000 00007f24fc010800
+0x00007f2504049930:   00007f24e9e33a40 0000000000000000
+0x00007f2504049940:   00007f24e9e33a40 00007f25040499e0
+0x00007f2504049950:   00007f25040499c0 00007f24ed020806
+0x00007f2504049960:   00007f25040499c0 00007f24ed020aa8
+0x00007f2504049970:   0000000500000001 00007f24ed0204e2
+0x00007f2504049980:   00007f2504049980 00007f24e9e33a40
+0x00007f2504049990:   00007f25040499e0 00007f24e9e33b58
+0x00007f25040499a0:   0000000000000000 00007f24e9e33a40
+0x00007f25040499b0:   0000000000000000 00007f25040499e0
+0x00007f25040499c0:   00007f2504049a30 00007f24ed0080e0
+0x00007f25040499d0:   0000000000000000 00007f24ed016d3b
+0x00007f25040499e0:   0000000718d69538 0000000718b21c58
+0x00007f25040499f0:   00007f25040499f0 00007f24e9e33578
+0x00007f2504049a00:   00007f2504049a48 00007f24e9e33610 
+
+Instructions: (pc=0x00007f2502b27767)
+0x00007f2502b27747:   89 c6 e8 62 ed 36 00 48 85 db 49 89 c6 0f 84 86
+0x00007f2502b27757:   01 00 00 48 85 c0 0f 84 7d 01 00 00 48 8b 45 a8
+0x00007f2502b27767:   48 8b 38 e8 b1 4e fc ff 84 c0 0f 85 c9 01 00 00
+0x00007f2502b27777:   48 8b 45 a8 48 8b 38 e8 5d 4b fc ff 49 89 c0 48 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007f24e99cc800 is an unknown value
+RCX=0x00007f24b358cbfb: <offset 0x2bfb> in /home/whl/Documents/java_project/demo/lib/Framework.so at 0x00007f24b358a000
+RDX=0x0000000000000028 is an unknown value
+RSP=0x00007f2504049810 is pointing into the stack for thread: 0x00007f24fc010800
+RBP=0x00007f2504049870 is pointing into the stack for thread: 0x00007f24fc010800
+RSI=0x00007f24b358cbf8: <offset 0x2bf8> in /home/whl/Documents/java_project/demo/lib/Framework.so at 0x00007f24b358a000
+RDI=0x00007f24e99ce3c0 is an unknown value
+R8 =0x0000000000000003 is an unknown value
+R9 =0x00000000000000e5 is an unknown value
+R10=0x00007f24fc446110 is an unknown value
+R11=0xfffffffffffffffe is an unknown value
+R12=0x00007f2504049830 is pointing into the stack for thread: 0x00007f24fc010800
+R13=0x00007f24b358cbfc: <offset 0x2bfc> in /home/whl/Documents/java_project/demo/lib/Framework.so at 0x00007f24b358a000
+R14=0x00007f24e99ce3c0 is an unknown value
+R15=0x00007f24fc010800 is a thread
+
+
+Stack: [0x00007f2503f4a000,0x00007f250404b000],  sp=0x00007f2504049810,  free space=1022k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x6c7767]  get_method_id(JNIEnv_*, _jclass*, char const*, char const*, bool, Thread*) [clone .constprop.107]+0x77
+V  [libjvm.so+0x6c7ae4]  jni_GetMethodID+0x74
+C  [Framework.so+0x2566]  JNIEnv_::GetMethodID(_jclass*, char const*, char const*)+0x38
+C  [Framework.so+0x220b]  Java_com_example_demo_better_Framework_create+0x45
+j  com.example.demo.better.Framework.create()Lcom/example/demo/domain/Camera;+0
+j  com.example.demo.main.FrameworkVerify.main([Ljava/lang/String;)V+24
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x68868b]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0xddb
+V  [libjvm.so+0x6d3641]  jni_invoke_static(JNIEnv_*, JavaValue*, _jobject*, JNICallType, _jmethodID*, JNI_ArgumentPusher*, Thread*) [clone .isra.96] [clone .constprop.117]+0x1e1
+V  [libjvm.so+0x6d590b]  jni_CallStaticVoidMethod+0x15b
+C  [libjli.so+0x889c]  JavaMain+0xa3c
+C  [libpthread.so.0+0x76ba]  start_thread+0xca
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.example.demo.better.Framework.create()Lcom/example/demo/domain/Camera;+0
+j  com.example.demo.main.FrameworkVerify.main([Ljava/lang/String;)V+24
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f24fc434800 JavaThread "Service Thread" daemon [_thread_blocked, id=14435, stack(0x00007f24b3890000,0x00007f24b3991000)]
+  0x00007f24fc417000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=14434, stack(0x00007f24b3991000,0x00007f24b3a92000)]
+  0x00007f24fc411800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=14433, stack(0x00007f24b3a92000,0x00007f24b3b93000)]
+  0x00007f24fc40e800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=14432, stack(0x00007f24b3b93000,0x00007f24b3c94000)]
+  0x00007f24a8001000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=14430, stack(0x00007f24b3cfd000,0x00007f24b3dfe000)]
+  0x00007f24fc1d9000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=14429, stack(0x00007f24b3dfe000,0x00007f24b3eff000)]
+  0x00007f24fc1d5800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=14427, stack(0x00007f24b3eff000,0x00007f24b4000000)]
+  0x00007f24fc1c8000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=14425, stack(0x00007f24c02fe000,0x00007f24c03ff000)]
+  0x00007f24fc198000 JavaThread "Finalizer" daemon [_thread_blocked, id=14420, stack(0x00007f24c03ff000,0x00007f24c0500000)]
+  0x00007f24fc193800 JavaThread "Reference Handler" daemon [_thread_blocked, id=14418, stack(0x00007f24e8013000,0x00007f24e8114000)]
+=>0x00007f24fc010800 JavaThread "main" [_thread_in_vm, id=14401, stack(0x00007f2503f4a000,0x00007f250404b000)]
+
+Other Threads:
+  0x00007f24fc18a000 VMThread [stack: 0x00007f24e8114000,0x00007f24e8215000] [id=14414]
+  0x00007f24fc437800 WatcherThread [stack: 0x00007f24b378f000,0x00007f24b3890000] [id=14436]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000005ca000000, size: 8032 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 150016K, used 7741K [0x0000000718b00000, 0x0000000723200000, 0x00000007c0000000)
+  eden space 129024K, 6% used [0x0000000718b00000,0x000000071928f5f8,0x0000000720900000)
+  from space 20992K, 0% used [0x0000000721d80000,0x0000000721d80000,0x0000000723200000)
+  to   space 20992K, 0% used [0x0000000720900000,0x0000000720900000,0x0000000721d80000)
+ ParOldGen       total 343040K, used 0K [0x00000005ca000000, 0x00000005def00000, 0x0000000718b00000)
+  object space 343040K, 0% used [0x00000005ca000000,0x00000005ca000000,0x00000005def00000)
+ Metaspace       used 3186K, capacity 4568K, committed 4864K, reserved 1056768K
+  class space    used 341K, capacity 392K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00007f24ec04f000,0x00007f24ed000000] byte_map_base: 0x00007f24e91ff000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f250342cde0
+ Begin Bits: [0x00007f24c0500000, 0x00007f24c8280000)
+ End Bits:   [0x00007f24c8280000, 0x00007f24d0000000)
+
+Polling page: 0x00007f2504071000
+
+CodeCache: size=245760Kb used=1122Kb max_used=1122Kb free=244637Kb
+ bounds [0x00007f24ed000000, 0x00007f24ed270000, 0x00007f24fc000000]
+ total_blobs=266 nmethods=28 adapters=161
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.150 Thread 0x00007f24fc417000 nmethod 14 0x00007f24ed10fbd0 code [0x00007f24ed10fd80, 0x00007f24ed1100d8]
+Event: 0.150 Thread 0x00007f24fc417000   15       3       java.util.ArrayList::rangeCheck (22 bytes)
+Event: 0.151 Thread 0x00007f24fc417000 nmethod 15 0x00007f24ed112490 code [0x00007f24ed1126c0, 0x00007f24ed113178]
+Event: 0.151 Thread 0x00007f24fc417000   16       3       java.util.ArrayList::elementData (7 bytes)
+Event: 0.151 Thread 0x00007f24fc417000 nmethod 16 0x00007f24ed10f710 code [0x00007f24ed10f880, 0x00007f24ed10fa10]
+Event: 0.151 Thread 0x00007f24fc417000   22  s    3       sun.misc.URLClassPath::getNextLoader (88 bytes)
+Event: 0.151 Thread 0x00007f24fc417000 nmethod 22 0x00007f24ed111510 code [0x00007f24ed111700, 0x00007f24ed111fa8]
+Event: 0.151 Thread 0x00007f24fc417000   27       3       java.lang.Math::min (11 bytes)
+Event: 0.151 Thread 0x00007f24fc417000 nmethod 27 0x00007f24ed110b10 code [0x00007f24ed110c80, 0x00007f24ed110e10]
+Event: 0.151 Thread 0x00007f24fc417000   26       3       java.util.HashMap::getNode (148 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (3 events):
+Event: 0.034 Thread 0x00007f24fc010800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x0000000718b07cb8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u231/13620/hotspot/src/sh
+Event: 0.034 Thread 0x00007f24fc010800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x0000000718b07fa0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u231/13620/hotspot/src/share/vm/prims/jni.c
+Event: 0.151 Thread 0x00007f24fc010800 Exception <a 'java/lang/NoClassDefFoundError': Lcom/example/demo/domain/Camera> (0x0000000718d6e5d0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u231/13620/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+
+Events (10 events):
+Event: 0.149 loading class sun/launcher/LauncherHelper$FXHelper
+Event: 0.149 loading class sun/launcher/LauncherHelper$FXHelper done
+Event: 0.149 loading class java/lang/Class$MethodArray
+Event: 0.149 loading class java/lang/Class$MethodArray done
+Event: 0.149 loading class java/lang/Void
+Event: 0.149 loading class java/lang/Void done
+Event: 0.149 loading class com/example/demo/better/Framework
+Event: 0.149 loading class com/example/demo/better/Framework done
+Event: 0.151 loading class Lcom/example/demo/domain/Camera
+Event: 0.151 loading class Lcom/example/demo/domain/Camera done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:11 10510491                           /home/whl/new_docker_libs/jdk1.8.0_231/bin/java
+00600000-00601000 r--p 00000000 08:11 10510491                           /home/whl/new_docker_libs/jdk1.8.0_231/bin/java
+00601000-00602000 rw-p 00001000 08:11 10510491                           /home/whl/new_docker_libs/jdk1.8.0_231/bin/java
+00dac000-00dcd000 rw-p 00000000 00:00 0                                  [heap]
+5ca000000-5def00000 rw-p 00000000 00:00 0 
+5def00000-718b00000 ---p 00000000 00:00 0 
+718b00000-723200000 rw-p 00000000 00:00 0 
+723200000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c0080000 rw-p 00000000 00:00 0 
+7c0080000-800000000 ---p 00000000 00:00 0 
+7f2488000000-7f2488021000 rw-p 00000000 00:00 0 
+7f2488021000-7f248c000000 ---p 00000000 00:00 0 
+7f2490000000-7f249005f000 rw-p 00000000 00:00 0 
+7f249005f000-7f2494000000 ---p 00000000 00:00 0 
+7f2494000000-7f2494021000 rw-p 00000000 00:00 0 
+7f2494021000-7f2498000000 ---p 00000000 00:00 0 
+7f2498000000-7f2498060000 rw-p 00000000 00:00 0 
+7f2498060000-7f249c000000 ---p 00000000 00:00 0 
+7f249c000000-7f249c05a000 rw-p 00000000 00:00 0 
+7f249c05a000-7f24a0000000 ---p 00000000 00:00 0 
+7f24a0000000-7f24a0021000 rw-p 00000000 00:00 0 
+7f24a0021000-7f24a4000000 ---p 00000000 00:00 0 
+7f24a4000000-7f24a4021000 rw-p 00000000 00:00 0 
+7f24a4021000-7f24a8000000 ---p 00000000 00:00 0 
+7f24a8000000-7f24a8021000 rw-p 00000000 00:00 0 
+7f24a8021000-7f24ac000000 ---p 00000000 00:00 0 
+7f24ac000000-7f24ac021000 rw-p 00000000 00:00 0 
+7f24ac021000-7f24b0000000 ---p 00000000 00:00 0 
+7f24b2d2f000-7f24b2fc4000 rw-p 00000000 00:00 0 
+7f24b2fc4000-7f24b2fdb000 r-xp 00000000 08:01 1573097                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f24b2fdb000-7f24b31da000 ---p 00017000 08:01 1573097                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f24b31da000-7f24b31db000 r--p 00016000 08:01 1573097                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f24b31db000-7f24b31dc000 rw-p 00017000 08:01 1573097                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f24b31dc000-7f24b3358000 r-xp 00000000 08:01 7081727                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f24b3358000-7f24b3558000 ---p 0017c000 08:01 7081727                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f24b3558000-7f24b3562000 r--p 0017c000 08:01 7081727                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f24b3562000-7f24b3564000 rw-p 00186000 08:01 7081727                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f24b3564000-7f24b3568000 rw-p 00000000 00:00 0 
+7f24b358a000-7f24b358e000 r-xp 00000000 08:11 3516738                    /home/whl/Documents/java_project/demo/lib/Framework.so
+7f24b358e000-7f24b378d000 ---p 00004000 08:11 3516738                    /home/whl/Documents/java_project/demo/lib/Framework.so
+7f24b378d000-7f24b378e000 r--p 00003000 08:11 3516738                    /home/whl/Documents/java_project/demo/lib/Framework.so
+7f24b378e000-7f24b378f000 rw-p 00004000 08:11 3516738                    /home/whl/Documents/java_project/demo/lib/Framework.so
+7f24b378f000-7f24b3790000 ---p 00000000 00:00 0 
+7f24b3790000-7f24b3890000 rw-p 00000000 00:00 0 
+7f24b3890000-7f24b3893000 ---p 00000000 00:00 0 
+7f24b3893000-7f24b3991000 rw-p 00000000 00:00 0 
+7f24b3991000-7f24b3994000 ---p 00000000 00:00 0 
+7f24b3994000-7f24b3a92000 rw-p 00000000 00:00 0 
+7f24b3a92000-7f24b3a95000 ---p 00000000 00:00 0 
+7f24b3a95000-7f24b3b93000 rw-p 00000000 00:00 0 
+7f24b3b93000-7f24b3b96000 ---p 00000000 00:00 0 
+7f24b3b96000-7f24b3c94000 rw-p 00000000 00:00 0 
+7f24b3c94000-7f24b3c9b000 r--s 00064000 08:11 13058257                   /home/whl/JetBrains.IntelliJ.IDEA.Ultimate.v2018.1.1.Linux/idea-IU-181.4445.78/lib/rt/debugger-agent.jar
+7f24b3c9b000-7f24b3cb6000 r--s 00146000 08:11 8480072                    /home/whl/.m2/repository/org/springframework/spring-core/5.2.8.RELEASE/spring-core-5.2.8.RELEASE.jar
+7f24b3cb6000-7f24b3cd0000 r--s 00230000 08:11 8487111                    /home/whl/.m2/repository/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21.jar
+7f24b3cd0000-7f24b3cd9000 r--s 00044000 08:11 8480226                    /home/whl/.m2/repository/org/springframework/spring-tx/5.2.8.RELEASE/spring-tx-5.2.8.RELEASE.jar
+7f24b3cd9000-7f24b3ce2000 r--s 0005b000 08:11 8480234                    /home/whl/.m2/repository/org/springframework/spring-jdbc/5.2.8.RELEASE/spring-jdbc-5.2.8.RELEASE.jar
+7f24b3ce2000-7f24b3cfd000 r--s 00111000 08:11 8479977                    /home/whl/.m2/repository/org/springframework/spring-context/5.2.8.RELEASE/spring-context-5.2.8.RELEASE.jar
+7f24b3cfd000-7f24b3d00000 ---p 00000000 00:00 0 
+7f24b3d00000-7f24b3dfe000 rw-p 00000000 00:00 0 
+7f24b3dfe000-7f24b3e01000 ---p 00000000 00:00 0 
+7f24b3e01000-7f24b3eff000 rw-p 00000000 00:00 0 
+7f24b3eff000-7f24b3f02000 ---p 00000000 00:00 0 
+7f24b3f02000-7f24b4000000 rw-p 00000000 00:00 0 
+7f24b4000000-7f24b4021000 rw-p 00000000 00:00 0 
+7f24b4021000-7f24b8000000 ---p 00000000 00:00 0 
+7f24b8000000-7f24b8021000 rw-p 00000000 00:00 0 
+7f24b8021000-7f24bc000000 ---p 00000000 00:00 0 
+7f24bc000000-7f24bc021000 rw-p 00000000 00:00 0 
+7f24bc021000-7f24c0000000 ---p 00000000 00:00 0 
+7f24c0004000-7f24c0006000 r--s 0001a000 08:11 13058173                   /home/whl/JetBrains.IntelliJ.IDEA.Ultimate.v2018.1.1.Linux/idea-IU-181.4445.78/lib/idea_rt.jar
+7f24c0006000-7f24c0007000 r--s 00005000 08:11 8480044                    /home/whl/.m2/repository/org/springframework/spring-jcl/5.2.8.RELEASE/spring-jcl-5.2.8.RELEASE.jar
+7f24c0007000-7f24c0009000 r--s 00009000 08:11 8480014                    /home/whl/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar
+7f24c0009000-7f24c000d000 r--s 00023000 08:11 8480222                    /home/whl/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar
+7f24c000d000-7f24c000e000 r--s 00001000 08:11 8480218                    /home/whl/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.3.3.RELEASE/spring-boot-starter-jdbc-2.3.3.RELEASE.jar
+7f24c000e000-7f24c0013000 r--s 00040000 08:11 8479993                    /home/whl/.m2/repository/org/springframework/spring-expression/5.2.8.RELEASE/spring-expression-5.2.8.RELEASE.jar
+7f24c0013000-7f24c001c000 r--s 00052000 08:11 8479994                    /home/whl/.m2/repository/org/springframework/spring-aop/5.2.8.RELEASE/spring-aop-5.2.8.RELEASE.jar
+7f24c001c000-7f24c002e000 r--s 000d8000 08:11 8479990                    /home/whl/.m2/repository/org/springframework/spring-webmvc/5.2.8.RELEASE/spring-webmvc-5.2.8.RELEASE.jar
+7f24c002e000-7f24c003b000 r--s 0009c000 08:11 8479978                    /home/whl/.m2/repository/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE.jar
+7f24c003b000-7f24c0057000 r--s 00144000 08:11 8479996                    /home/whl/.m2/repository/org/springframework/spring-web/5.2.8.RELEASE/spring-web-5.2.8.RELEASE.jar
+7f24c0057000-7f24c005d000 r--s 0003c000 08:11 8479985                    /home/whl/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.37/tomcat-embed-websocket-9.0.37.jar
+7f24c005d000-7f24c0062000 r--s 00036000 08:11 8479976                    /home/whl/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar
+7f24c0062000-7f24c008e000 r--s 0030f000 08:11 8479984                    /home/whl/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.37/tomcat-embed-core-9.0.37.jar
+7f24c008e000-7f24c008f000 r--s 00001000 08:11 8479982                    /home/whl/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.3.3.RELEASE/spring-boot-starter-tomcat-2.3.3.RELEASE.jar
+7f24c008f000-7f24c0091000 r--s 00001000 08:11 8479980                    /home/whl/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.2/jackson-module-parameter-names-2.11.2.jar
+7f24c0091000-7f24c0095000 r--s 00018000 08:11 8479975                    /home/whl/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.2/jackson-datatype-jsr310-2.11.2.jar
+7f24c0095000-7f24c0097000 r--s 00007000 08:11 8479973                    /home/whl/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.2/jackson-datatype-jdk8-2.11.2.jar
+7f24c0097000-7f24c009b000 r--s 00052000 08:11 8479971                    /home/whl/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.2/jackson-core-2.11.2.jar
+7f24c009b000-7f24c00b0000 r--s 00146000 08:11 8479967                    /home/whl/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.2/jackson-databind-2.11.2.jar
+7f24c00b0000-7f24c00b7000 r--s 00045000 08:11 8479963                    /home/whl/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar
+7f24c00b7000-7f24c00e1000 r--s 0013f000 08:11 8479953                    /home/whl/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.3.3.RELEASE/spring-boot-autoconfigure-2.3.3.RELEASE.jar
+7f24c00e1000-7f24c00f9000 r--s 000fa000 08:11 8479974                    /home/whl/.m2/repository/org/springframework/boot/spring-boot/2.3.3.RELEASE/spring-boot-2.3.3.RELEASE.jar
+7f24c00f9000-7f24c00fd000 r-xp 00000000 08:11 10526781                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libdt_socket.so
+7f24c00fd000-7f24c02fc000 ---p 00004000 08:11 10526781                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libdt_socket.so
+7f24c02fc000-7f24c02fd000 r--p 00003000 08:11 10526781                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libdt_socket.so
+7f24c02fd000-7f24c02fe000 rw-p 00004000 08:11 10526781                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libdt_socket.so
+7f24c02fe000-7f24c0301000 ---p 00000000 00:00 0 
+7f24c0301000-7f24c03ff000 rw-p 00000000 00:00 0 
+7f24c03ff000-7f24c0402000 ---p 00000000 00:00 0 
+7f24c0402000-7f24d0000000 rw-p 00000000 00:00 0 
+7f24d0000000-7f24d0021000 rw-p 00000000 00:00 0 
+7f24d0021000-7f24d4000000 ---p 00000000 00:00 0 
+7f24d4000000-7f24d4021000 rw-p 00000000 00:00 0 
+7f24d4021000-7f24d8000000 ---p 00000000 00:00 0 
+7f24d8000000-7f24d8021000 rw-p 00000000 00:00 0 
+7f24d8021000-7f24dc000000 ---p 00000000 00:00 0 
+7f24dc000000-7f24dc021000 rw-p 00000000 00:00 0 
+7f24dc021000-7f24e0000000 ---p 00000000 00:00 0 
+7f24e0000000-7f24e0021000 rw-p 00000000 00:00 0 
+7f24e0021000-7f24e4000000 ---p 00000000 00:00 0 
+7f24e4000000-7f24e4021000 rw-p 00000000 00:00 0 
+7f24e4021000-7f24e8000000 ---p 00000000 00:00 0 
+7f24e8000000-7f24e8003000 r--s 0000e000 08:11 8479969                    /home/whl/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.2/jackson-annotations-2.11.2.jar
+7f24e8003000-7f24e8004000 r--s 00001000 08:11 8479965                    /home/whl/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.3.3.RELEASE/spring-boot-starter-json-2.3.3.RELEASE.jar
+7f24e8004000-7f24e8006000 r--s 00005000 08:11 8479961                    /home/whl/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar
+7f24e8006000-7f24e8008000 r--s 00000000 08:11 8479959                    /home/whl/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar
+7f24e8008000-7f24e8013000 r--s 00069000 08:11 8479951                    /home/whl/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar
+7f24e8013000-7f24e8016000 ---p 00000000 00:00 0 
+7f24e8016000-7f24e8114000 rw-p 00000000 00:00 0 
+7f24e8114000-7f24e8115000 ---p 00000000 00:00 0 
+7f24e8115000-7f24e977a000 rw-p 00000000 00:00 0 
+7f24e977a000-7f24e9954000 r--s 03d89000 08:11 10518539                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/rt.jar
+7f24e9954000-7f24e9e65000 rw-p 00000000 00:00 0 
+7f24e9e65000-7f24ea225000 ---p 00000000 00:00 0 
+7f24ea225000-7f24eb1d5000 rw-p 00000000 00:00 0 
+7f24eb1d5000-7f24eb1d6000 ---p 00000000 00:00 0 
+7f24eb1d6000-7f24eb2d6000 rw-p 00000000 00:00 0 
+7f24eb2d6000-7f24eb2d7000 ---p 00000000 00:00 0 
+7f24eb2d7000-7f24eb3d7000 rw-p 00000000 00:00 0 
+7f24eb3d7000-7f24eb3d8000 ---p 00000000 00:00 0 
+7f24eb3d8000-7f24eb4d8000 rw-p 00000000 00:00 0 
+7f24eb4d8000-7f24eb4d9000 ---p 00000000 00:00 0 
+7f24eb4d9000-7f24eb681000 rw-p 00000000 00:00 0 
+7f24eb681000-7f24ec04f000 ---p 00000000 00:00 0 
+7f24ec04f000-7f24ec0f7000 rw-p 00000000 00:00 0 
+7f24ec0f7000-7f24ecac4000 ---p 00000000 00:00 0 
+7f24ecac4000-7f24ecb18000 rw-p 00000000 00:00 0 
+7f24ecb18000-7f24ecfff000 ---p 00000000 00:00 0 
+7f24ecfff000-7f24ed000000 rw-p 00000000 00:00 0 
+7f24ed000000-7f24ed270000 rwxp 00000000 00:00 0 
+7f24ed270000-7f24fc000000 ---p 00000000 00:00 0 
+7f24fc000000-7f24fc473000 rw-p 00000000 00:00 0 
+7f24fc473000-7f2500000000 ---p 00000000 00:00 0 
+7f2500000000-7f2500006000 r--s 00042000 08:11 8479957                    /home/whl/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar
+7f2500006000-7f250000c000 r--s 00041000 08:11 8479949                    /home/whl/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar
+7f250000c000-7f250001f000 r--s 0034b000 08:11 10518661                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/resources.jar
+7f250001f000-7f2500020000 ---p 00000000 00:00 0 
+7f2500020000-7f2500120000 rw-p 00000000 00:00 0 
+7f2500120000-7f2500121000 ---p 00000000 00:00 0 
+7f2500121000-7f250022b000 rw-p 00000000 00:00 0 
+7f250022b000-7f25005e1000 ---p 00000000 00:00 0 
+7f25005e1000-7f25005fc000 r-xp 00000000 08:11 10526793                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libzip.so
+7f25005fc000-7f25007fb000 ---p 0001b000 08:11 10526793                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libzip.so
+7f25007fb000-7f25007fc000 r--p 0001a000 08:11 10526793                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libzip.so
+7f25007fc000-7f25007fd000 rw-p 0001b000 08:11 10526793                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libzip.so
+7f25007fd000-7f2500808000 r-xp 00000000 08:01 1609134                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f2500808000-7f2500a07000 ---p 0000b000 08:01 1609134                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f2500a07000-7f2500a08000 r--p 0000a000 08:01 1609134                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f2500a08000-7f2500a09000 rw-p 0000b000 08:01 1609134                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f2500a09000-7f2500a0f000 rw-p 00000000 00:00 0 
+7f2500a0f000-7f2500a1a000 r-xp 00000000 08:01 1609138                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f2500a1a000-7f2500c19000 ---p 0000b000 08:01 1609138                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f2500c19000-7f2500c1a000 r--p 0000a000 08:01 1609138                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f2500c1a000-7f2500c1b000 rw-p 0000b000 08:01 1609138                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f2500c1b000-7f2500c31000 r-xp 00000000 08:01 1609124                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f2500c31000-7f2500e30000 ---p 00016000 08:01 1609124                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f2500e30000-7f2500e31000 r--p 00015000 08:01 1609124                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f2500e31000-7f2500e32000 rw-p 00016000 08:01 1609124                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f2500e32000-7f2500e34000 rw-p 00000000 00:00 0 
+7f2500e34000-7f2500e3c000 r-xp 00000000 08:01 1609136                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f2500e3c000-7f250103b000 ---p 00008000 08:01 1609136                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f250103b000-7f250103c000 r--p 00007000 08:01 1609136                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f250103c000-7f250103d000 rw-p 00008000 08:01 1609136                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f250103d000-7f2501047000 r-xp 00000000 08:11 10526795                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libinstrument.so
+7f2501047000-7f2501246000 ---p 0000a000 08:11 10526795                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libinstrument.so
+7f2501246000-7f2501247000 r--p 00009000 08:11 10526795                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libinstrument.so
+7f2501247000-7f2501248000 rw-p 0000a000 08:11 10526795                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libinstrument.so
+7f2501248000-7f25016d2000 r--p 00000000 08:01 7078947                    /usr/lib/locale/locale-archive
+7f25016d2000-7f25016d4000 r-xp 00000000 08:11 10526806                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libnpt.so
+7f25016d4000-7f25018d4000 ---p 00002000 08:11 10526806                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libnpt.so
+7f25018d4000-7f25018d5000 r--p 00002000 08:11 10526806                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libnpt.so
+7f25018d5000-7f25018d6000 rw-p 00003000 08:11 10526806                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libnpt.so
+7f25018d6000-7f2501910000 r-xp 00000000 08:11 10526779                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libjdwp.so
+7f2501910000-7f2501b0f000 ---p 0003a000 08:11 10526779                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libjdwp.so
+7f2501b0f000-7f2501b10000 r--p 00039000 08:11 10526779                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libjdwp.so
+7f2501b10000-7f2501b11000 rw-p 0003a000 08:11 10526779                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libjdwp.so
+7f2501b11000-7f2501b3d000 r-xp 00000000 08:11 10526784                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libjava.so
+7f2501b3d000-7f2501d3d000 ---p 0002c000 08:11 10526784                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libjava.so
+7f2501d3d000-7f2501d3e000 r--p 0002c000 08:11 10526784                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libjava.so
+7f2501d3e000-7f2501d40000 rw-p 0002d000 08:11 10526784                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libjava.so
+7f2501d40000-7f2501d4d000 r-xp 00000000 08:11 10526775                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libverify.so
+7f2501d4d000-7f2501f4c000 ---p 0000d000 08:11 10526775                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libverify.so
+7f2501f4c000-7f2501f4e000 r--p 0000c000 08:11 10526775                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libverify.so
+7f2501f4e000-7f2501f4f000 rw-p 0000e000 08:11 10526775                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/libverify.so
+7f2501f4f000-7f2501f56000 r-xp 00000000 08:01 1609141                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f2501f56000-7f2502155000 ---p 00007000 08:01 1609141                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f2502155000-7f2502156000 r--p 00006000 08:01 1609141                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f2502156000-7f2502157000 rw-p 00007000 08:01 1609141                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f2502157000-7f250225f000 r-xp 00000000 08:01 1609125                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f250225f000-7f250245e000 ---p 00108000 08:01 1609125                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f250245e000-7f250245f000 r--p 00107000 08:01 1609125                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f250245f000-7f2502460000 rw-p 00108000 08:01 1609125                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f2502460000-7f2503149000 r-xp 00000000 08:11 10526791                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/server/libjvm.so
+7f2503149000-7f2503348000 ---p 00ce9000 08:11 10526791                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/server/libjvm.so
+7f2503348000-7f25033de000 r--p 00ce8000 08:11 10526791                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/server/libjvm.so
+7f25033de000-7f250340f000 rw-p 00d7e000 08:11 10526791                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/amd64/server/libjvm.so
+7f250340f000-7f250344a000 rw-p 00000000 00:00 0 
+7f250344a000-7f250360a000 r-xp 00000000 08:01 1609110                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f250360a000-7f250380a000 ---p 001c0000 08:01 1609110                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f250380a000-7f250380e000 r--p 001c0000 08:01 1609110                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f250380e000-7f2503810000 rw-p 001c4000 08:01 1609110                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f2503810000-7f2503814000 rw-p 00000000 00:00 0 
+7f2503814000-7f2503817000 r-xp 00000000 08:01 1584625                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f2503817000-7f2503a16000 ---p 00003000 08:01 1584625                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f2503a16000-7f2503a17000 r--p 00002000 08:01 1584625                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f2503a17000-7f2503a18000 rw-p 00003000 08:01 1584625                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f2503a18000-7f2503a2f000 r-xp 00000000 08:11 10494103                   /home/whl/new_docker_libs/jdk1.8.0_231/lib/amd64/jli/libjli.so
+7f2503a2f000-7f2503c2e000 ---p 00017000 08:11 10494103                   /home/whl/new_docker_libs/jdk1.8.0_231/lib/amd64/jli/libjli.so
+7f2503c2e000-7f2503c2f000 r--p 00016000 08:11 10494103                   /home/whl/new_docker_libs/jdk1.8.0_231/lib/amd64/jli/libjli.so
+7f2503c2f000-7f2503c30000 rw-p 00017000 08:11 10494103                   /home/whl/new_docker_libs/jdk1.8.0_231/lib/amd64/jli/libjli.so
+7f2503c30000-7f2503c48000 r-xp 00000000 08:01 1609112                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f2503c48000-7f2503e47000 ---p 00018000 08:01 1609112                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f2503e47000-7f2503e48000 r--p 00017000 08:01 1609112                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f2503e48000-7f2503e49000 rw-p 00018000 08:01 1609112                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f2503e49000-7f2503e4d000 rw-p 00000000 00:00 0 
+7f2503e4d000-7f2503e73000 r-xp 00000000 08:01 1609132                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f2503e73000-7f2503e75000 r--s 00003000 08:11 8479955                    /home/whl/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar
+7f2503e75000-7f2503e76000 r--s 00001000 08:11 8479948                    /home/whl/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.3.3.RELEASE/spring-boot-starter-logging-2.3.3.RELEASE.jar
+7f2503e76000-7f2503e77000 r--s 00001000 08:11 8479946                    /home/whl/.m2/repository/org/springframework/boot/spring-boot-starter/2.3.3.RELEASE/spring-boot-starter-2.3.3.RELEASE.jar
+7f2503e77000-7f2503e78000 r--s 00001000 08:11 8479945                    /home/whl/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.3.3.RELEASE/spring-boot-starter-web-2.3.3.RELEASE.jar
+7f2503e78000-7f2503e8b000 r--s 000d6000 08:11 10518533                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/plugin.jar
+7f2503e8b000-7f2503e8c000 r--s 00000000 08:11 10518739                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/management-agent.jar
+7f2503e8c000-7f2503e90000 r--s 000a4000 08:11 10518728                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/jsse.jar
+7f2503e90000-7f2503e92000 r--s 00007000 08:11 10518733                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/jfxswt.jar
+7f2503e92000-7f2503ead000 r--s 0020c000 08:11 10518534                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/deploy.jar
+7f2503ead000-7f2503f4a000 rw-p 00000000 00:00 0 
+7f2503f4a000-7f2503f4d000 ---p 00000000 00:00 0 
+7f2503f4d000-7f2504050000 rw-p 00000000 00:00 0 
+7f2504050000-7f2504055000 r--s 00087000 08:11 10518723                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/jfr.jar
+7f2504055000-7f2504058000 r--s 0001a000 08:11 10518629                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/jce.jar
+7f2504058000-7f2504062000 r--s 0006e000 08:11 10518665                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/javaws.jar
+7f2504062000-7f2504067000 r--s 002f9000 08:11 10518538                   /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/charsets.jar
+7f2504067000-7f2504068000 r--s 00002000 08:11 13058256                   /home/whl/JetBrains.IntelliJ.IDEA.Ultimate.v2018.1.1.Linux/idea-IU-181.4445.78/lib/rt/debugger-agent-storage.jar
+7f2504068000-7f2504070000 rw-s 00000000 08:01 6947062                    /tmp/hsperfdata_whl/14393
+7f2504070000-7f2504071000 rw-p 00000000 00:00 0 
+7f2504071000-7f2504072000 r--p 00000000 00:00 0 
+7f2504072000-7f2504073000 r--p 00025000 08:01 1609132                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f2504073000-7f2504074000 rw-p 00026000 08:01 1609132                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f2504074000-7f2504075000 rw-p 00000000 00:00 0 
+7fffe0c47000-7fffe0c69000 rw-p 00000000 00:00 0                          [stack]
+7fffe0df7000-7fffe0dfa000 r--p 00000000 00:00 0                          [vvar]
+7fffe0dfa000-7fffe0dfc000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:8137,suspend=y,server=n -javaagent:/home/whl/JetBrains.IntelliJ.IDEA.Ultimate.v2018.1.1.Linux/idea-IU-181.4445.78/lib/rt/debugger-agent.jar=file:/tmp/capture.props -Dfile.encoding=UTF-8 
+java_command: com.example.demo.main.FrameworkVerify
+java_class_path (initial): /home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/charsets.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/deploy.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/cldrdata.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/dnsns.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/jaccess.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/jfxrt.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/localedata.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/nashorn.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/sunec.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/sunjce_provider.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/sunpkcs11.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/ext/zipfs.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/javaws.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/jce.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/jfr.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/jfxswt.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/jsse.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/management-agent.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/plugin.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/resources.jar:/home/whl/new_docker_libs/jdk1.8.0_231/jre/lib/rt.jar:/home/whl/Documents/java_project/demo/target/classes:/home/whl/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.3.3.RELEASE/spring-boot-starter-web-2.3.3.RELEASE.jar:/home/whl/.m2/repository/org/springframework/boot/spring-boot-starter/2.3.3.RELEASE/spring-boot-starter-2.3.3.RELEASE.jar:/home/whl/.m2/repository/org/springframework/boot/spring-boot/2.3.3.RELEASE/spring-boot-2.3.3.RELEASE.jar:/home/whl/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.3.3.RELEASE/spring-boot-autoconfigure-2.3.3.RELEASE.jar:/home/whl/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.3.3.RELEASE/spring-boot-starter-logging-2.3.3.RELEASE.jar:/home/whl/.
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+JRE_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre
+CLASSPATH=.:/usr/lib/jvm/java-1.8.0-openjdk-amd64/lib:/lib
+PATH=/usr/local/mongodb/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xad4d90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xad4d90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x90bc10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x90bc10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x90bc10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x90bc10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x90bae0], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x90c100], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x90c100], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x90c100], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x90c100], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.5 LTS"
+
+uname:Linux 4.15.0-112-generic #113~16.04.1-Ubuntu SMP Fri Jul 10 04:37:08 UTC 2020 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 1000000, NOFILE 1000000, AS infinity
+load average:5.17 4.64 4.51
+
+/proc/meminfo:
+MemTotal:       32891256 kB
+MemFree:         3085008 kB
+MemAvailable:   18974504 kB
+Buffers:         1097088 kB
+Cached:         14798940 kB
+SwapCached:           12 kB
+Active:         20909536 kB
+Inactive:        7703628 kB
+Active(anon):   12602848 kB
+Inactive(anon):   329696 kB
+Active(file):    8306688 kB
+Inactive(file):  7373932 kB
+Unevictable:          96 kB
+Mlocked:              96 kB
+SwapTotal:        998396 kB
+SwapFree:         997116 kB
+Dirty:               752 kB
+Writeback:             0 kB
+AnonPages:      12717464 kB
+Mapped:          1343716 kB
+Shmem:            300452 kB
+Slab:             843028 kB
+SReclaimable:     667524 kB
+SUnreclaim:       175504 kB
+KernelStack:       35632 kB
+PageTables:       116036 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    17444024 kB
+Committed_AS:   26618728 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:     2115488 kB
+DirectMap2M:    30341120 kB
+DirectMap1G:     1048576 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-5
+cpu_memory_nodes: 0
+active_processor_count: 6
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 15845986304
+memory_max_usage_in_bytes: 16250978304
+
+
+CPU:total 6 (initial active 6) (6 cores per cpu, 1 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8600K CPU @ 3.60GHz
+stepping	: 10
+microcode	: 0xd6
+cpu MHz		: 4099.997
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 0
+cpu cores	: 6
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8600K CPU @ 3.60GHz
+stepping	: 10
+microcode	: 0xd6
+cpu MHz		: 4099.998
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 1
+cpu cores	: 6
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8600K CPU @ 3.60GHz
+stepping	: 10
+microcode	: 0xd6
+cpu MHz		: 4099.994
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 2
+cpu cores	: 6
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8600K CPU @ 3.60GHz
+stepping	: 10
+microcode	: 0xd6
+cpu MHz		: 4100.004
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 3
+cpu cores	: 6
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8600K CPU @ 3.60GHz
+stepping	: 10
+microcode	: 0xd6
+cpu MHz		: 4100.002
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 4
+cpu cores	: 6
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8600K CPU @ 3.60GHz
+stepping	: 10
+microcode	: 0xd6
+cpu MHz		: 4100.000
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 5
+cpu cores	: 6
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit srbds
+bogomips	: 7200.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 32891256k(3083508k free), swap 998396k(997116k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.231-b11) for linux-amd64 JRE (1.8.0_231-b11), built on Oct  5 2019 03:00:41 by "java_re" with gcc 7.3.0
+
+time: Thu Aug 27 16:29:50 2020
+timezone: CST
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
